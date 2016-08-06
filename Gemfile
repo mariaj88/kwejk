@@ -28,6 +28,7 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 
 gem 'devise'
+gem "paperclip", "~> 5.0.0"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
