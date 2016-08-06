@@ -1,10 +1,20 @@
 Rails.application.routes.draw do
 
-  resources :mems
+  devise_for :admins
+  devise_for:users
+  
+  
+  resources :mems do
+    collection do
+     get 'my' => "mems#my"
+     get 'inactive'
+  end
+ end
+  
+  
   get 'home/index'
 
-  devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
-  root 'home#index'
+  root 'mems#index'
 end
